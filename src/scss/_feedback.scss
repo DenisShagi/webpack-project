@@ -94,6 +94,10 @@
 
 .feedback-chat,
 .request-call { 
+  
+  background: #fff;
+  z-index: 1200; /* Находится выше overlay и aside-left */
+  padding: 20px;
   display: none;
 }
 

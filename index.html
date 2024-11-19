@@ -19,30 +19,30 @@
           <div class="request-call__header feedback__header">
             <h3 class="request-call__title feedback__title">Заказать звонок</h3>
           </div>
-          <div class="request-call__main feedback__main">
+          <form class="request-call__main feedback__main" action="/submit" method="POST">
             <label class="request-call__label feedback__label">
               <input
-                  class="request-call__input feedback__input"
-                  type="text"
-                  placeholder="Телефон"/>
+                class="request-call__input feedback__input"
+                type="text"
+                name="phone"
+                placeholder="Телефон"
+                required
+              />
             </label>
             <div class="feedback__desc"> 
               <p class="feedback__text">
                 Нажимая “отправить”, вы даете согласие на
-                <a href="#" class="feedback__link"
-                >обработку персональных данных</a
-                >
+                <a href="#" class="feedback__link">обработку персональных данных</a>
                 и соглашаетесь с нашей
-                <a href="#" class="feedback__link"
-                >политикой конфиденциальности</a
-                >
+                <a href="#" class="feedback__link">политикой конфиденциальности</a>
               </p>
             </div>
-            <button class="price__btn feedback__btn" >
+            <button class="price__btn feedback__btn" type="submit">
               <span class="price__btn-text" title="Нажмите, чтобы отправить">Отправить</span>
               <div class="brends__arrow price__arrow"></div>
-           </button>
-          </div>
+            </button>
+          </form>
+          
         </div>
       </div>
     </div>
@@ -53,48 +53,53 @@
           <div class="feedback-chat__header feedback__header">
             <h3 class="feedback-chat__title feedback__title">Обратная связь</h3>
           </div>
-          <div class="feedback-chat__main feedback__main">
+          <form class="feedback-chat__main feedback__main" action="/submit-chat" method="POST">
             <label class="feedback-chat__label feedback__label">
               <input
-                  class="feedback-chat__input feedback__input"
-                  type="text"
-                  placeholder="Телефон"/>
-            </label>
-            <label class="feedback__label">
-              <input
-                  class="feedback__input"
-                  type="text"
-                  placeholder="Электронная почта"
+                class="feedback-chat__input feedback__input"
+                type="text"
+                name="phone"
+                placeholder="Телефон"
+                required
               />
             </label>
             <label class="feedback__label">
               <input
-                  class="feedback__input feedback__input_text"
-                  type="text"
-                  placeholder="Сообщение"
+                class="feedback__input"
+                type="email"
+                name="email"
+                placeholder="Электронная почта"
+                required
               />
+            </label>
+            <label class="feedback__label">
+              <textarea
+                class="feedback__input feedback__input_text"
+                name="message"
+                placeholder="Сообщение"
+                rows="4"
+                required
+              ></textarea>
             </label>
             <div class="feedback__desc">
               <p class="feedback__text">
                 Нажимая “отправить”, вы даете согласие на
-                <a href="#" class="feedback__link"
-                >обработку персональных данных</a
-                >
+                <a href="#" class="feedback__link">обработку персональных данных</a>
                 и соглашаетесь с нашей
-                <a href="#" class="feedback__link"
-                >политикой конфиденциальности</a
-                >
+                <a href="#" class="feedback__link">политикой конфиденциальности</a>
               </p>
             </div>
-            <button class="feedback__btn btn-arrow" >
+            <button class="feedback__btn btn-arrow" type="submit">
               <span class="price__btn-text" title="Нажмите, чтобы отправить">Отправить</span>
               <div class="brends__arrow price__arrow"></div>
-           </button>
-          </div>
+            </button>
+          </form>
+          
         </div>
       </div>
     </div>
     <aside class="aside-left" id="aside-left">
+
       <div class="aside-left__container">
           <div class="aside-left__header">
             <nav class="aside-left__nav">
